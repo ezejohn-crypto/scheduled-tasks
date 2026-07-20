@@ -3,6 +3,7 @@ import random
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
 
 
 import pandas
@@ -13,9 +14,7 @@ today = (now.month, now.day)
 birth_dict = {(row['month'], row['day']): row for (index, row) in birthday_data.iterrows()}
 
 
-# # Email credentials
-# sender_email = "godstimemacaulay@gmail.com"
-# sender_password = "orowvtphwsvktlau"  # Use an app password if required
+
 
 MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
